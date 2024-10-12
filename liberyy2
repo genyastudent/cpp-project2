@@ -46,21 +46,21 @@ int main() {
 	return 0;
 }
 // Третья программа: Решение математического выражения
-int main() {
-    double x;
+#include <iostream>
 
-    // Ввод значения x
-    cout << "Введите значение x: ";
-    cin >> x;
-
-    // Вычисляем части выражения
-    double part1 = cbrt(pow(x, 2)) + sqrt(abs(x));  // cbrt() - кубический корень
-    double part2 = log2(pow(sin((abs(x) + 29) * M_PI / 180), 2)); // Перевод в радианы
-    double part3 = (M_PI * abs(tan(x))) / 2;
-
-    // Полное выражение
-    double y = part1 / part2 + part3;
-
-    // Вывод результата
-    cout << "Результат y: " << y << endl;
+using namespace std;
+int main()
+{
+	cout << "\n Math.1. \n";
+	const double pi = 3.141592;
+	double x, num, denom, tgx, y;
+	cout << "Real argument x =";
+	cin >> x;
+	num = cbrt(pow(x, 2)) + sqrt(x);
+	denom = log2(pow(sin(abs(x) + 29 * pi / 180), 2));
+	tgx = pi * abs(tan(x)) / 2;
+	y = num / denom + tgx;
+	cout << "Function y =" << y << endl;
+	return 0;
 }
+
